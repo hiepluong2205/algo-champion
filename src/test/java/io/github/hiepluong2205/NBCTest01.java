@@ -1,10 +1,7 @@
 package io.github.hiepluong2205;
 
-import org.junit.Ignore;
-import org.junit.Test;
-
-import java.util.List;
-import java.util.Stack;
+import org.testng.annotations.Ignore;
+import org.testng.annotations.Test;
 
 public class NBCTest01 {
   // @Ignore
@@ -77,12 +74,12 @@ public class NBCTest01 {
   @Ignore
   @Test
   public void test04() {
-//    ChromeWebDriver driver = new ChromeWebDriver();
-//    driver.goTo("https://www.google.com");
-//    PageGoogleSearch pageGoogleSearch = new PageGoogleSearch(driver, wait);
-//    PageGoogleSearchResult pageGoogleSearchResult = new PageGoogleSearchResult(driver, wait);
-//    pageGoogleSearch.search("Universal Movies from 2010 to 2020");
-//    pageGoogleSearchResult().clickOnResult("Wikipedia");
+    //    ChromeWebDriver driver = new ChromeWebDriver();
+    //    driver.goTo("https://www.google.com");
+    //    PageGoogleSearch pageGoogleSearch = new PageGoogleSearch(driver, wait);
+    //    PageGoogleSearchResult pageGoogleSearchResult = new PageGoogleSearchResult(driver, wait);
+    //    pageGoogleSearch.search("Universal Movies from 2010 to 2020");
+    //    pageGoogleSearchResult().clickOnResult("Wikipedia");
     // TODO JDBC
 
   }

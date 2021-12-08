@@ -1,6 +1,6 @@
 package io.github.hiepluong2205;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import java.util.Scanner;
 
