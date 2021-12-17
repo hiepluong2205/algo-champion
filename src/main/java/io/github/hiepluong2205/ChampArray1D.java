@@ -97,7 +97,25 @@ public class ChampArray1D {
   }
 
   public void mergeSortedArray(int[] nums1, int m, int[] nums2, int n) {
-// https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3253/
+    // https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3253/
 
+  }
+
+  public int removeElement(int[] nums, int val) {
+    // https://leetcode.com/explore/learn/card/fun-with-arrays/526/deleting-items-from-an-array/3247/
+    int i = 0;
+    return i;
+  }
+
+  public void sort(int[] nums, int i, int k) {}
+
+  public boolean validMountainArray(int[] arr) {
+    boolean result = false;
+    return result;
+  }
+
+  public boolean checkIfExist(int[] arr) {
+    boolean result = false;
+    return result;
   }
 }
