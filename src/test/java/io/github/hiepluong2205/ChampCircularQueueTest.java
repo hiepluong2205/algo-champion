@@ -2,7 +2,7 @@ package io.github.hiepluong2205;
 
 import org.testng.annotations.Test;
 
-public class CircularQueueTest {
+public class ChampCircularQueueTest {
     @Test
     public void test1() {
         ChampCircularQueue champCircularQueue1 = new ChampCircularQueue(123);
