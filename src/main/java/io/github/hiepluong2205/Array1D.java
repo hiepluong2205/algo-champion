@@ -3,6 +3,8 @@ package io.github.hiepluong2205;
 import java.util.Arrays;
 
 public class Array1D {
+    int length = 0;
+
     public int findMaxConsecutiveOnes(int[] nums) {
         int numCount = 0;
         return numCount;
@@ -12,10 +14,6 @@ public class Array1D {
         int numCount = 0;
         for (int i = 0; i < nums.length; i++) {
             int number = Math.abs(nums[i]);
-            //      if ((number >= 0 && number < 10)
-            //          | (number >= 100 && number < 1000)
-            //          | (number >= 10000 && number < 100000)
-            //          | (number >= 1000000 && number < 10000000)) {
             if ((number >= 10 && number < 100)
                     | (number >= 1000 && number < 10000)
                     | (number >= 100000 && number < 1000000)
@@ -40,6 +38,19 @@ public class Array1D {
 
     public void duplicateZeros(int[] arr) {
 //    int[] arr = {1, 0, 2, 3, 0, 4, 5, 0};
+        int countZero = 0;
+        for (int i = 0; i < arr.length; i++) {
+        }
+    }
 
+    public void add(int num) {
+        int[] intNewArr = new int[6];
+
+    }
+
+    public void print() {
+//        for (int i = 0; i < intArray.length; i++) {
+//            System.out.println("Index " + i + " contains " + intArray[i]);
+//        }
     }
 }

@@ -17,14 +17,14 @@ public class ChampCirQueue {
     private int p_head;
     private int p_tail;
 
-    public ChampCirQueue(int in1) {
-        champCirQueue = new ArrayList<Integer>(in1);
+    public ChampCirQueue(int k) {
+        champCirQueue = new ArrayList<Integer>(k);
         p_head = 0;
-        p_tail = in1;
-        for (int i = 0; i < in1; i++) {
-//            champCirQueue.add(in1[i]);
-        }
-        loggerChampCirQueue.debug(String.valueOf(champCirQueue));
+        p_tail = k;
+//        for (int i = 0; i < k; i++) {
+////            champCirQueue.add(k[i]);
+//        }
+//        loggerChampCirQueue.debug(String.valueOf(champCirQueue));
     }
 
     /**
@@ -32,11 +32,11 @@ public class ChampCirQueue {
      */
     public boolean enQueue(int value) {
         if (isFull()) {
-loggerChampCirQueue.debug("champCirQueue full!");
+            loggerChampCirQueue.debug("champCirQueue full!");
         } else {
-        loggerChampCirQueue.debug(String.valueOf(p_tail));
-        champCirQueue.add(value);
-        loggerChampCirQueue.debug(String.valueOf(p_tail));
+            loggerChampCirQueue.debug(String.valueOf(p_tail));
+            champCirQueue.add(value);
+            loggerChampCirQueue.debug(String.valueOf(p_tail));
         }
         if (p_tail < champCirQueue.size() - 1) {
             p_tail++;
@@ -52,19 +52,20 @@ loggerChampCirQueue.debug("champCirQueue full!");
      */
     public boolean deQueue() {
         if (isEmpty() == true) {
-            loggerChampCirQueue.debug("empty CirQueue");
+            loggerChampCirQueue.debug("empty already!");
             return false;
-        }
-        champCirQueue.remove(p_head);
-        loggerChampCirQueue.debug(String.valueOf(champCirQueue));
-        p_head++;
-        if (p_tail < champCirQueue.size() - 1) {
-            p_head++;
         } else {
-            p_head = 0;
-        }
-        return true;
+            champCirQueue.remove(p_head);
+            loggerChampCirQueue.debug(String.valueOf(champCirQueue));
+            p_head++;
 
+            if (p_tail < champCirQueue.size() - 1) {
+                p_head++;
+            } else {
+                p_head = 0;
+            }
+            return true;
+        }
     }
 
     /**

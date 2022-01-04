@@ -10,8 +10,8 @@ import java.util.Arrays;
 public class ChampCirQueueTest {
     @Test
     public void test1() {
-        String[] arr1 = new String[]{"MyCircularQueue", "enQueue", "enQueue", "enQueue", "enQueue", "Rear", "isFull", "deQueue", "enQueue", "Rear"};
-        String[] result = new String[arr1.length];
+//        String[] arr1 = new String[]{"MyCircularQueue", "enQueue", "enQueue", "enQueue", "enQueue", "Rear", "isFull", "deQueue", "enQueue", "Rear"};
+//        String[] result = new String[arr1.length];
         ChampCirQueue champCirQueue1 = new ChampCirQueue(5);
         champCirQueue1.enQueue(5);
         champCirQueue1.enQueue(13);

@@ -3,7 +3,6 @@ package io.github.hiepluong2205;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array1DTest {
@@ -57,7 +56,7 @@ public class Array1DTest {
 
     @Ignore
     @Test
-    public void testFindNumbers() {
+    public void findNumbers() {
         //    int[] nums = {12, 345, 2, 6, 7896};
         Array1D arr = new Array1D();
         int[] nums = {555, 901, 482, 1771};
@@ -68,14 +67,19 @@ public class Array1DTest {
     @Test
     public void sortedSquares() {
         Array1D arr = new Array1D();
-// int[] nums = {555, 901, 482, 1771};
+
+        // int[] nums = {555, 901, 482, 1771};
+        // int[] nums = {-7,-3,2,3,11};
         int[] nums = {-4, -1, 0, 3, 10};
+
         arr.sortedSquares(nums);
-//    for (int i = 0; i < nums.length; i++) {
-//      System.out.println("i = " + i);
-//      nums[i] = nums[i] * nums[i];
-//      System.out.println(nums[i]);
-//    }
-//    Arrays.sort(nums);
+    }
+
+    @Test
+    public void testduplicateZeros() {
+        Array1D champarr = new Array1D();
+//        int[] arr = {1, 0, 2, 3, 0, 4, 5, 0};
+        int[] arr = {1, 2, 3};
+        champarr.duplicateZeros(arr);
     }
 }
