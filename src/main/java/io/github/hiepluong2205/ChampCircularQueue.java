@@ -1,25 +1,24 @@
 package io.github.hiepluong2205;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class ChampCircularQueue {
     // store elements
-    private List<Integer> newCirQueue;
-    final static Logger loggerChampCircularQueue = LoggerFactory.getLogger(ChampCircularQueue.class);
+    private List<Integer> champCirQueue;
+//    final static Logger loggerChampCircularQueue = LoggerFactory.getLogger(ChampCircularQueue.class);
 
     // a pointer to indicate the start position
-    private int p_head;
-    private int p_tail;
+    private int[] data;
+    private int p_head, p_tail, size;
 
     public ChampCircularQueue(int k) {
-        newCirQueue = new ArrayList<Integer>();
-        loggerChampCircularQueue.debug(newCirQueue.toString());
-        p_head = 0;
-        p_tail = k;
+        champCirQueue = new ArrayList<Integer>();
+//        loggerChampCircularQueue.debug(newCirQueue.toString());
+        data = new int[k];
+        p_head = -1;
+        p_tail = -1;
+        size = k;
 
     }
 
@@ -27,7 +26,14 @@ public class ChampCircularQueue {
      * Insert an element into the queue. Return true if the operation is successful.
      */
     public boolean enQueue(int value) {
-        newCirQueue.add(value);
+        if (isFull() == true) {
+            return false;
+        }
+        if (isEmpty() == true) {
+            p_head = 0;
+        }
+        p_tail = (p_tail + 1) % size;
+        data[p_tail] = value;
         return true;
     }
 
@@ -38,34 +44,40 @@ public class ChampCircularQueue {
         if (isEmpty() == true) {
             return false;
         }
-        p_head++;
+        if (p_head == p_tail) {
+            p_head = -1;
+            p_tail = -1;
+            return true;
+        }
+        p_head = (p_head + 1) % size;
         return true;
-
     }
 
     /**
      * Get the front item from the queue.
      */
     public int Front() {
-// loggerChampCircularQueue.debug(p_head);
-        return newCirQueue.get(p_head);
+        if (isEmpty() == true) {
+            return -1;
+        }
+        return data[p_head];
     }
 
     public int Rear() {
-        int result = 0;
-        return result;
-
+        if (isEmpty() == true) {
+            return -1;
+        }
+        return data[p_tail];
     }
 
     /**
      * Checks whether the queue is empty or not.
      */
     public boolean isEmpty() {
-        return p_head >= newCirQueue.size();
+        return p_head == -1;
     }
 
     public boolean isFull() {
-        boolean result = false;
-        return result;
+        return ((p_tail + 1) % size) == p_head;
     }
 }
