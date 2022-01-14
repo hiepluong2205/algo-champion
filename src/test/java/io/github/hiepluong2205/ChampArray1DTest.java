@@ -1,11 +1,12 @@
 package io.github.hiepluong2205;
 
+import org.testng.Assert;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import java.util.Scanner;
 
-public class Array1DTest {
+public class ChampArray1DTest {
     @Ignore
     @Test
     public void test1() {
@@ -58,28 +59,37 @@ public class Array1DTest {
     @Test
     public void findNumbers() {
         //    int[] nums = {12, 345, 2, 6, 7896};
-        Array1D arr = new Array1D();
+        ChampArray1D arr = new ChampArray1D(5);
         int[] nums = {555, 901, 482, 1771};
         arr.findNumbers(nums);
     }
 
-    //  @Ignore
+    @Ignore
     @Test
     public void sortedSquares() {
-        Array1D arr = new Array1D();
-
+        ChampArray1D arr = new ChampArray1D(4);
         // int[] nums = {555, 901, 482, 1771};
         // int[] nums = {-7,-3,2,3,11};
         int[] nums = {-4, -1, 0, 3, 10};
-
+        int[] expectedSquaredNums = {0, 1, 9, 16, 100};
         arr.sortedSquares(nums);
+        Assert.assertEquals(arr.sortedSquares(nums), expectedSquaredNums);
+    }
+
+    //    @Ignore
+    @Test
+    public void testduplicateZeros() {
+        ChampArray1D champarr = new ChampArray1D(11);
+        int[] arr = {1, 0, 2, 3, 0, 4, 5, 0};
+//        int[] arr = {1, 2, 3};
+//        champarr.duplicateZeros(arr);
+        champarr.print(arr);
+        champarr.add(arr, 2, 0);
+        champarr.print(arr);
     }
 
     @Test
-    public void testduplicateZeros() {
-        Array1D champarr = new Array1D();
-//        int[] arr = {1, 0, 2, 3, 0, 4, 5, 0};
-        int[] arr = {1, 2, 3};
-        champarr.duplicateZeros(arr);
+    void testMerge() {
+
     }
 }
