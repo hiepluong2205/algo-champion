@@ -2,25 +2,23 @@ package io.github.hiepluong2205.exercism;
 
 // https://exercism.org/tracks/java/exercises/log-levels
 public class LogLevels {
-  public static String message(String logLine) {
-    //    logLine.substring(0, logLine.length() - 1);
-    String strLogMessage = "";
-    if (logLine.contains("[ERROR]: ")
-        | logLine.contains("[WARNING]: ")
-        | logLine.contains("[INFO]: ")) {
+    static String logLine, level, message;
+    String[] arrLogLevel = {"INFO", "WARNING", "ERROR"};
 
-      strLogMessage = logLine.split("]: ")[1];
+    public static String message(String logLine) {
+        message = logLine.split("]: ")[1];
+        message.trim();
+        return message;
     }
-    return strLogMessage;
-  }
 
-  public static String logLevel(String logLine) {
-    String strLogLevel = "";
-    return strLogLevel;
-  }
+    public static String logLevel(String logLine) {
+        logLine.substring(1);
+        logLine.
+        return level;
+    }
 
-  public static String reformat(String logLine) {
-    String strFormattedLog = "";
-    return strFormattedLog;
-  }
+    public static String reformat(String logLine) {
+
+        return logLine;
+    }
 }
