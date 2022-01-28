@@ -10,9 +10,10 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 
+// https://www.hackerrank.com/challenges/three-month-preparation-kit-plus-minus/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=preparation-kits&playlist_slugs%5B%5D=three-month-preparation-kit&playlist_slugs%5B%5D=three-month-week-one
 public class PlusMinusTest {
     @Test
-    public void test1() throws IOException {
+    public void main() throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(bufferedReader.readLine().trim());

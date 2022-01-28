@@ -1,11 +1,11 @@
-package io.github.hiepluong2205;
+package io.github.hiepluong2205.champjava;
 
 public class ChampLinkedList extends ChampSet {
   int val;
   ChampLinkedList next;
   ChampLinkedList prev;
 
-  ChampLinkedList() {
+  public ChampLinkedList() {
     //        val = x;
   }
 

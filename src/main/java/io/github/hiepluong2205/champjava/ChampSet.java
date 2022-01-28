@@ -1,4 +1,4 @@
-package io.github.hiepluong2205;
+package io.github.hiepluong2205.champjava;
 
 public class ChampSet {
     public void search(int[] arr, int k) {

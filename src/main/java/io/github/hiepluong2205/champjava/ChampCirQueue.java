@@ -1,4 +1,4 @@
-package io.github.hiepluong2205;
+package io.github.hiepluong2205.champjava;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

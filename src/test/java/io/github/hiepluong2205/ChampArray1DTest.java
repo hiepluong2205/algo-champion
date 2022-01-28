@@ -1,5 +1,6 @@
 package io.github.hiepluong2205;
 
+import io.github.hiepluong2205.champjava.ChampArray1D;
 import org.testng.Assert;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
