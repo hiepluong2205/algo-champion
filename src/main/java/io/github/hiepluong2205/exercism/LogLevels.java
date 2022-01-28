@@ -13,7 +13,7 @@ public class LogLevels {
 
     public static String logLevel(String logLine) {
         logLine.substring(1);
-        logLine.
+//        logLine.
         return level;
     }
 
