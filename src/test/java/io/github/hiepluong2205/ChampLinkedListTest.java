@@ -1,11 +1,10 @@
 package io.github.hiepluong2205;
 
+import io.github.hiepluong2205.champjava.ChampLinkedList;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.*;
 
 public class ChampLinkedListTest {
 

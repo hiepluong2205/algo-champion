@@ -1,4 +1,4 @@
-package io.github.hiepluong2205;
+package io.github.hiepluong2205.champjava;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -17,7 +17,11 @@ public class ChampIterator {
             System.out.println((String) element);
         }
     }
-    public void stdIn(){}
-    public void stdOut(){}
+
+    public void stdIn() {
+    }
+
+    public void stdOut() {
+    }
 
 }
