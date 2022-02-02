@@ -41,4 +41,9 @@ public class ChampArray extends ChampSet {
     //    }
     return countStep;
   }
+  public void print(int[] intArray){
+    for (int i = 0; i < intArray.length; i++) {
+      System.out.println("Index " + i + " contains " + intArray[i]);
+    }
+  }
 }
