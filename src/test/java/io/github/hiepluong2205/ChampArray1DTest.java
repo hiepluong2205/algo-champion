@@ -1,6 +1,6 @@
 package io.github.hiepluong2205;
 
-import io.github.hiepluong2205.champjava.ChampArray1D;
+import io.github.hiepluong2205.leetcode.ChampArray1D;
 import org.testng.Assert;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
@@ -85,7 +85,7 @@ public class ChampArray1DTest {
 //        int[] arr = {1, 2, 3};
 //        champarr.duplicateZeros(arr);
         champarr.print(arr);
-        champarr.add(arr, 2, 0);
+        champarr.addElement(arr, 2, 0);
         champarr.print(arr);
     }
 

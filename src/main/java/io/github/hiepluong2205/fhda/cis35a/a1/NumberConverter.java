@@ -1,4 +1,13 @@
-package io.github.hiepluong2205.fhda.cis35a;
+/*
+ * Name: Hiep Tuan Luong
+ * Class & Section: CIS 35A-36Y
+ * Assignment Number: 2
+ * Due Date: 02/02/2022
+ * Date Submitted: 02/02/2022
+ * https://deanza.instructure.com/courses/23660/assignments
+ */
+
+package io.github.hiepluong2205.fhda.cis35a.a1;
 
 /*
 Lab 2a -

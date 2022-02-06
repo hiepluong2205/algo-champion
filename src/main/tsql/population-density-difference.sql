@@ -1,9 +1,5 @@
+-- https://www.hackerrank.com/challenges/population-density-difference/problem?isFullScreen=false
 select
-    DIFFERENCE(max(population), MIN(population))
+    (max(population) - MIN(population))
 from
-    city
-where
-    and
-order by
-group by
-;
+    city;
