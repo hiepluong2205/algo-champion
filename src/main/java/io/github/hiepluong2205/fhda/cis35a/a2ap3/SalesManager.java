@@ -1,13 +1,23 @@
 /*
  * Name: Hiep Tuan Luong
  * Class & Section: CIS 35A-36Y
+ * Assignment Number:
+ * Due Date: 02/02/2022
+ * Date Submitted: 02/02/2022
+ * https://deanza.instructure.com/courses/23660/assignments
+ */
+
+/*
+ * Name: Hiep Tuan Luong
+ * Class & Section: CIS 35A-36Y
  * Assignment Number: 2
  * Due Date: 02/02/2022
  * Date Submitted: 02/02/2022
  * https://deanza.instructure.com/courses/23660/assignments
  */
 
-package io.github.hiepluong2205.fhda.cis35a.a1;
+package io.github.hiepluong2205.fhda.cis35a.a2ap3;
+
 /*
 Lab 2a -
 You must use arrays, static methods, loops and decision making constructs. Please put each part in its own project.
@@ -24,7 +34,6 @@ d. The company's increase or decrease from the previous quarter(this will not be
 e. The average sales for all divisions that quarter.
 f. The division with the highest sales for that quarter.
 */
-
 public class SalesManager {
     //Input Validation: Do not accept negative numbers for sales figures.
     private static boolean isNegative(int salesFigure) {

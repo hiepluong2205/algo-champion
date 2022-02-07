@@ -1,13 +1,23 @@
 /*
  * Name: Hiep Tuan Luong
  * Class & Section: CIS 35A-36Y
+ * Assignment Number:
+ * Due Date: 02/02/2022
+ * Date Submitted: 02/02/2022
+ * https://deanza.instructure.com/courses/23660/assignments
+ */
+
+/*
+ * Name: Hiep Tuan Luong
+ * Class & Section: CIS 35A-36Y
  * Assignment Number: 2
  * Due Date: 02/02/2022
  * Date Submitted: 02/02/2022
  * https://deanza.instructure.com/courses/23660/assignments
  */
 
-package io.github.hiepluong2205.fhda.cis35a.a1;
+package io.github.hiepluong2205.fhda.cis35a.a2ap2;
+
 /*
 Lab 2a -
 You must use arrays, static methods, loops and decision making constructs. Please put each part in its own project.
@@ -26,20 +36,27 @@ c. totalIncorrect() - Returns the total number of incorrectly answered questions
 d. An int array containing the questions numbers of the questions that the student missed.
 
 Demonstrate the program by setting the values of student's answers in main(You are not required to prompt the user to enter values using Scanner or System.in.read()), and then display the result returned from the methods written in the program.
-
-Here are some suggestions on variable and method declarations.
-char [] coorectAns = new char[15];
-char [] studentAns = new char[15];
-
-static boolean passed(char [] correct, char [] student) { }
-static int totalCorrectAnswers(char [] correct, char [] student) { }
-static int totalInCorrectAnswers(char [] correct, char [] student) { }
-static int [] questionNumbersMissed(char [] correct, char [] student) {
-//which questions were either not answered or were incorrect.
-//declaring a char array that keeps track of the questions that were incorrectly answered.
-}
- */
-
+*/
 public class ExamGrader {
     private static final String[] expected = {"B", "D", "A", "A", "C", "D", "A", "B", "C", "A", "B", "C", "D", "A", "B"};
+    char[] corectAns = new char[15];
+    char[] studentAns = new char[15];
+
+    static boolean passed(char[] correct, char[] student) {
+        return true;
+    }
+
+    static int totalCorrectAnswers(char[] correct, char[] student) {
+        return 1;
+    }
+
+    static int totalInCorrectAnswers(char[] correct, char[] student) {
+        return 1;
+    }
+
+    static int[] questionNumbersMissed(char[] correct, char[] student) {
+        //which questions were either not answered or were incorrect.
+        //declaring a char array that keeps track of the questions that were incorrectly answered.
+        return new int[]{};
+    }
 }
