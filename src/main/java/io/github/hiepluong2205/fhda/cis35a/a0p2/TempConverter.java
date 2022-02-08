@@ -11,6 +11,7 @@ package io.github.hiepluong2205.fhda.cis35a.a0p2;
 
 import java.util.Scanner;
 
+// https://deanza.instructure.com/courses/23660/assignments/678799
 public class TempConverter {
     public static int tempF, tempC;
 

@@ -92,4 +92,13 @@ public class ChampArray {
         }
         return result;
     }
+
+    public int searchBinary(int target) {
+        int indexTarget = -1;
+        if (indexTarget < 0) {
+            return 0;
+        } else {
+            return -1;
+        }
+    }
 }
