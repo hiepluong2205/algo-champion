@@ -16,9 +16,7 @@ public class PlusMinus {
 
         int n = Integer.parseInt(bufferedReader.readLine().trim());
 
-        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-                .map(Integer::parseInt)
-                .collect(toList());
+        List<Integer> arr = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" ")).map(Integer::parseInt).collect(toList());
 
         PlusMinus.plusMinus(arr);
 
@@ -28,21 +26,23 @@ public class PlusMinus {
 
     public static void plusMinus(List<Integer> arr) {
         int countElementsNegative = 0, countElementsPositive = 0, countElementsZero = 0;
-        Iterator<Integer> it = arr.iterator();
+        float rateElementsNegative = 0.000000f, rateElementsPositive = 0.000000f, rateElementsZero = 0.000000f;
+//        Iterator<Integer> it = arr.iterator();
         for (int i = 0; i < arr.size(); i++) {
-            if (it.next() == 0) {
+            if (arr.get(i) == 0) {
                 countElementsZero++;
-            } else if (it.next() > 0) {
+            } else if (arr.get(i) > 0) {
                 countElementsPositive++;
             } else {
                 countElementsNegative++;
             }
         }
-
-        float rateElementsNegative = 0.000000f, rateElementsPositive = 0.000000f, rateElementsZero = 0.000000f;
         rateElementsNegative = countElementsNegative / arr.size();
+        System.out.println("rateElementsNegative = " + rateElementsNegative);
         rateElementsPositive = countElementsPositive / arr.size();
+        System.out.println("rateElementsPositive = " + rateElementsPositive);
         rateElementsZero = countElementsZero / arr.size();
+        System.out.println("rateElementsZero = " + rateElementsZero);
         System.out.println(rateElementsPositive);
         System.out.println(rateElementsNegative);
         System.out.println(rateElementsZero);
