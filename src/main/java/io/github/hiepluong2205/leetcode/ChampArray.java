@@ -10,9 +10,14 @@
  */
 package io.github.hiepluong2205.leetcode;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class ChampArray {
     int[] intArr;
     String[] strArr;
+    final Logger logger = LoggerFactory.getLogger(ChampArray.class);
+
 
     public ChampArray() {
     }
@@ -102,4 +107,18 @@ public class ChampArray {
             return -1;
         }
     }
+
+    // https://leetcode.com/explore/learn/card/fun-with-arrays/527/searching-for-items-in-an-array/3250/
+    public boolean checkIfExist(int[] arr) {
+        boolean result = false;
+        return result;
+    }
+
+    // https://leetcode.com/explore/learn/card/fun-with-arrays/527/searching-for-items-in-an-array/3251/
+    public boolean validMountainArray(int[] arr) {
+        boolean result = false;
+        return result;
+    }
+
+
 }

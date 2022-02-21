@@ -60,7 +60,7 @@ public class ChampArray1DTest {
     @Test
     public void findNumbers() {
         //    int[] nums = {12, 345, 2, 6, 7896};
-        ChampArray1D arr = new ChampArray1D(5);
+        ChampArray1D arr = new ChampArray1D();
         int[] nums = {555, 901, 482, 1771};
         arr.findNumbers(nums);
     }
@@ -68,7 +68,7 @@ public class ChampArray1DTest {
     @Ignore
     @Test
     public void sortedSquares() {
-        ChampArray1D arr = new ChampArray1D(4);
+        ChampArray1D arr = new ChampArray1D();
         // int[] nums = {555, 901, 482, 1771};
         // int[] nums = {-7,-3,2,3,11};
         int[] nums = {-4, -1, 0, 3, 10};
@@ -80,12 +80,12 @@ public class ChampArray1DTest {
     //    @Ignore
     @Test
     public void testduplicateZeros() {
-        ChampArray1D champarr = new ChampArray1D(11);
+        ChampArray1D champarr = new ChampArray1D();
         int[] arr = {1, 0, 2, 3, 0, 4, 5, 0};
 //        int[] arr = {1, 2, 3};
 //        champarr.duplicateZeros(arr);
         champarr.print(arr);
-        champarr.addElement(arr, 2, 0);
+        champarr.addLeft(arr, 2, 0);
         champarr.print(arr);
     }
 

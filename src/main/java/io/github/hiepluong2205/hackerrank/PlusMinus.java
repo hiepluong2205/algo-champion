@@ -25,7 +25,7 @@ public class PlusMinus {
     }
 
     public static void plusMinus(List<Integer> arr) {
-        int countElementsNegative = 0, countElementsPositive = 0, countElementsZero = 0;
+        float countElementsNegative = 0.000000f, countElementsPositive = 0.000000f, countElementsZero = 0.000000f;
         float rateElementsNegative = 0.000000f, rateElementsPositive = 0.000000f, rateElementsZero = 0.000000f;
 //        Iterator<Integer> it = arr.iterator();
         for (int i = 0; i < arr.size(); i++) {

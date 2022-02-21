@@ -16,8 +16,7 @@ public class ChampArray1D {
     String[] strArr;
     int length = 0;
 
-    public ChampArray1D(int length) {
-        intArr = new int[length];
+    public ChampArray1D() {
     }
 
     public int findNumbers(int[] nums) {
@@ -42,32 +41,45 @@ public class ChampArray1D {
         return squaredNums;
     }
 
-    public void duplicateZeros(int[] intArr) {
-// 1. count zeros
-        int countZero = countElements(intArr, 0);
-        for (int i = 0; i < intArr.length; i++) {
-            if (intArr[i] == 0) {
-                countZero++;
-            }
-        }
-// 2. create new int[]
-        int[] arrResult = new int[intArr.length + countZero];
-        print(arrResult);
-// 3. duplicate zeros
-        for (int i = 0; i < arrResult.length; i++) {
-            if (arrResult[i] == 0) {
-                addElement(arrResult, i + 1, 0);
-                i++;
+    // https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3245/
+    public static void duplicateZeros(int[] arrTarget) {
+        int countZero = 0;
+        countZero = countElement(arrTarget, 0);
+
+        // 2. create new int[]
+        int[] arrExpanded = new int[arrTarget.length + countZero];
+
+        // 3. duplicate zeros
+        for (int i = 0; i < arrExpanded.length; i++) {
+            if (arrExpanded[i] == 0) {
+                arrExpanded = new int[arrExpanded.length + 1];
             } else {
                 //do nothing
             }
         }
+        // 4. print arrExpanded
     }
 
-    private int countElements(int[] arr, int targetElement) {
+    public static int[] addLeft(int[] arrTarget, int index, int value) {
+        // create new blank arr, as a container
+        int[] arrExpanded = new int[arrTarget.length + 1];
+
+        // 1. Shift each element one position to the right
+        for (int i = arrExpanded.length - 1; i >= index; i--) {
+            System.out.println(i);
+            arrExpanded[i] = arrTarget[i - 1];
+            print(arrExpanded);
+        }
+
+        // 2. Set value to the desired index
+        arrExpanded[index] = value;
+        return arrExpanded;
+    }
+
+    protected static int countElement(int[] arrTarget, int elementTarget) {
         int countElement = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == 0) {
+        for (int i = 0; i < arrTarget.length; i++) {
+            if (arrTarget[i] == 0) {
                 countElement++;
             } else {
                 // do nothing
@@ -76,30 +88,28 @@ public class ChampArray1D {
         return countElement;
     }
 
-    public int[] addElement(int[] intArr, int index, int value) {
-        int[] intArrExpanded = new int[intArr.length + 1];
-
-        // 1. Shift each element one position to the right.
-        for (int i = intArr.length - 1; i >= index; i--) {
-            intArrExpanded[i + 1] = intArrExpanded[i];
-        }
-        // 2. Set value to the desired index
-        intArrExpanded[index] = value;
-        return intArrExpanded;
-    }
-
+    // https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3253/
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-
+        for (int i = 0; i < m; i++) {
+            if (nums1[i] >= nums2[i]) {
+                addLeft(nums1, i, nums2[i]);
+            } else {
+                // do nothing
+                print(nums1);
+            }
+        }
+        print(nums1);
     }
 
 
-    public void print(int[] nums) {
+    public static void print(int[] nums) {
         System.out.println("nums.length = " + nums.length);
         for (int i = 0; i < nums.length; i++) {
             System.out.println("Index " + i + " contains " + nums[i]);
         }
     }
 
+    // https://leetcode.com/explore/learn/card/fun-with-arrays/526/deleting-items-from-an-array/3247/
     public int removeElement(int[] nums, int val) {
         // Say we want to delete the element at index 1
         for (int i = 2; i < length; i++) {
@@ -110,5 +120,11 @@ public class ChampArray1D {
         // state of the array.
         length--;
         return length;
+    }
+
+    // https://leetcode.com/explore/learn/card/fun-with-arrays/526/deleting-items-from-an-array/3248/
+    public int removeDuplicates(int[] nums) {
+        int num = 0;
+        return num;
     }
 }

@@ -9,28 +9,20 @@
 
 package io.github.hiepluong2205.leetcode;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
-
 public class ChampArray1DTest {
+    ChampArray1D champArr1;
 
-    @BeforeMethod
-    public void setUp() {
-    }
-
-    @AfterMethod
-    public void tearDown() {
-    }
-
+    @Ignore
     @Test
     public void testRemoveElement() {
-        ChampArray1D champArray1D = new ChampArray1D(6);
-        int[] nums = {1,2,3,4,5}; // Input array
+        ChampArray1D champArray1D = new ChampArray1D();
+        int[] nums = {1, 2, 3, 4, 5}; // Input array
         int val = 3; // Value to remove
-        int[] expectedNums = {1,2,4,5}; // The expected answer with correct length.
+        int[] expectedNums = {1, 2, 4, 5}; // The expected answer with correct length.
         // It is sorted with no values equaling val.
 
         int k = champArray1D.removeElement(nums, val); // Calls your implementation
@@ -40,5 +32,26 @@ public class ChampArray1DTest {
 //        for (int i = 0; i < actualLength; i++) {
 //            assert nums[i] == expectedNums[i];
 //        }
+    }
+
+    @Ignore
+    @Test
+    public void testDuplicateZeros() {
+    }
+
+    @Ignore
+    @Test
+    public void testAddElement() {
+        int[] arr = {1, 2, 3, 4, 5};
+        arr = ChampArray1D.addLeft(arr, 2, 5);
+        ChampArray1D.print(arr);
+    }
+
+    @Test
+    public void testMerge() {
+        champArr1 = new ChampArray1D();
+        int[] nums1 = {1, 2, 3, 0, 0, 0}, nums2 = {2, 3, 4}, result = {1, 2, 2, 3, 3, 4};
+        champArr1.merge(nums1, 6, nums2, 3);
+//        Assert.assertEquals(nums1, result);
     }
 }

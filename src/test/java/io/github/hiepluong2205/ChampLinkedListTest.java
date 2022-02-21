@@ -1,6 +1,6 @@
 package io.github.hiepluong2205;
 
-import io.github.hiepluong2205.champjava.ChampLinkedList;
+import io.github.hiepluong2205.leetcode.ChampLinkedList;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
