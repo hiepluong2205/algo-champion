@@ -13,7 +13,7 @@ package io.github.hiepluong2205.fhda.cis35a;
 
 import java.util.Scanner;
 
-public class PracticalJava {
+public class ChampCIS35A {
     static Scanner in = new Scanner(System.in);
 
     public static void p1(String[] args) {

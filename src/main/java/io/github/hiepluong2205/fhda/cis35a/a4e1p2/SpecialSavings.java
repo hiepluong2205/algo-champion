@@ -20,19 +20,9 @@
  * - https://discord.com/channels/927730169152675841/927730169731493972
  */
 
-package io.github.hiepluong2205.champjava;
+package io.github.hiepluong2205.fhda.cis35a.a4e1p2;
 
-import io.github.hiepluong2205.champjava.ChampSet;
+import io.github.hiepluong2205.fhda.cis35a.a4e1p1.SavingsAccount;
 
-public class ChampQueue extends ChampSet {
-    public void enqueue(int[] queue, int index) {
-    }
-
-    public void dequeue() {
-    }
-
-    // https://leetcode.com/explore/learn/card/queue-stack/231/practical-application-queue/1374/
-    public int numIslands(char[][] grid) {
-        return 0;
-    }
+public class SpecialSavings extends SavingsAccount {
 }

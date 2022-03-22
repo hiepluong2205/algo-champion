@@ -20,19 +20,31 @@
  * - https://discord.com/channels/927730169152675841/927730169731493972
  */
 
-package io.github.hiepluong2205.champjava;
+package io.github.hiepluong2205.fhda.cis35a.a5;
 
-import io.github.hiepluong2205.champjava.ChampSet;
+public class Student {
+    private int SID;
+    private int scores[] = new int[5];
 
-public class ChampQueue extends ChampSet {
-    public void enqueue(int[] queue, int index) {
+    public int getSID() {
+        return SID;
     }
 
-    public void dequeue() {
+    public void setSID(int SID) {
+        this.SID = SID;
     }
 
-    // https://leetcode.com/explore/learn/card/queue-stack/231/practical-application-queue/1374/
-    public int numIslands(char[][] grid) {
-        return 0;
+    public int[] getScores() {
+        return scores;
     }
+
+    public void setScores(int[] scores) {
+        this.scores = scores;
+    }
+
+//write public get and set methods for
+
+//SID and scores
+
+//add methods to print values of instance variables.
 }

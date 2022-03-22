@@ -1,7 +1,7 @@
 <component name="CopyrightManager">
-  <settings>
+  <settings default="io.github.hiepluong2205.fhda">
     <module2copyright>
-      <element module="All" copyright="FHDA-CIS35A" />
+      <element module="All" copyright="io.github.hiepluong2205.fhda" />
     </module2copyright>
   </settings>
 </component>

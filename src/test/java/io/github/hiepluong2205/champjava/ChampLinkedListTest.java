@@ -11,7 +11,6 @@
 
 package io.github.hiepluong2205.champjava;
 
-import io.github.hiepluong2205.leetcode.ChampLinkedList;
 import org.testng.annotations.Test;
 
 public class ChampLinkedListTest {

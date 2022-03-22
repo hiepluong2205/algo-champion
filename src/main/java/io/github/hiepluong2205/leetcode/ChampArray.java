@@ -22,6 +22,21 @@ public class ChampArray {
     public ChampArray() {
     }
 
+    // https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/
+    public int countOdds(int low, int high) {
+        int countOddNums = (high - low) / 2;
+        if (low % 2 == 1 | high % 2 == 1) {
+            countOddNums = (high - low) / 2 + 1;
+        }
+        return countOddNums;
+    }
+
+    // https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/
+    public double average(int[] salary) {
+        int avg = 0;
+        return 0;
+    }
+
     // https://leetcode.com/explore/learn/card/fun-with-arrays/521/introduction/3238/
     public int findMaxConsecutiveOnes(int[] nums) {
         int countConsecutiveOnes = 0, maxConsecutiveOnes = 0;
@@ -49,28 +64,43 @@ public class ChampArray {
         }
     }
 
+    /*
+    - int indicator
+    - Loop through the array from 0 to nums.length
+      - indicator found? return false && break loop
+      - Indicator NOT found? return true
+      i=i+1? i = i+2? i = i+3?
+      i+1 = i+2? i+1 = i+3?
+     */
+    // https://leetcode.com/problems/contains-duplicate/
     public boolean containsDuplicate(int[] nums) {
-/*
-- int indicator
-- Loop through the array from 0 to nums.length
-  - indicator found? return false && break loop
-  - Indicator NOT found? return true
-  i=i+1? i = i+2? i = i+3?
-  i+1 = i+2? i+1 = i+3?
- */
-        int temp = 0;
         boolean result = false;
+        for (int i : nums) {
+
+        }
         for (int i = 0; i < nums.length - 1; i++) {
-            temp = nums[i];
-            for (int j = i + 1; j < nums.length - 1; j++) {
-                if (nums[j] == temp) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] == nums[i]) {
                     result = true;
-                } else {
-                    result = false;
+                    break;
                 }
             }
         }
         return result;
+    }
+
+    // https://leetcode.com/problems/maximum-subarray/
+    public int maxSubArray(int[] nums) {
+        int maxSum = 0, windowSum = 0, windowStart, windowEnd;
+        for (int i = 0; i < nums.length - 1; i++) {
+            for (int j = 0; j < nums.length; j++) {
+
+            }
+        }
+        if (windowSum > maxSum) {
+            maxSum = windowSum;
+        }
+        return maxSum;
     }
 
     /*
@@ -120,5 +150,10 @@ public class ChampArray {
         return result;
     }
 
+    // https://leetcode.com/explore/learn/card/fun-with-arrays/511/in-place-operations/3259/
+    public int[] replaceElements(int[] arr) {
+        int[] arrInt = {};
+        return arrInt;
+    }
 
 }

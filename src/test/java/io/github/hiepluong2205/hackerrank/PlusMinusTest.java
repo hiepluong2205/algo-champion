@@ -27,7 +27,7 @@ public class PlusMinusTest {
                 .map(Integer::parseInt)
                 .collect(toList());
 
-        PlusMinus.plusMinus(arr);
+        ChampList.plusMinus(arr);
 
         bufferedReader.close();
 
@@ -43,6 +43,6 @@ public class PlusMinusTest {
 
     @Test
     public void testPlusMinus() {
-        PlusMinus.plusMinus(Arrays.asList(-4, 3, -9, 0, 4, 1));
+        ChampList.plusMinus(Arrays.asList(-4, 3, -9, 0, 4, 1));
     }
 }

@@ -9,8 +9,14 @@
 
 package io.github.hiepluong2205.educative;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class ChampArray {
-    public double[] findAverages(int K, int[] arr) {
+    final static Logger logger = LoggerFactory.getLogger(ChampArray.class);
+
+    // https://www.educative.io/courses/grokking-the-coding-interview/7D5NNZWQ8Wr
+    public static double[] findAverages(int K, int[] arr) {
         double[] result = new double[arr.length - K + 1];
         double windowSum = 0;
         int windowStart = 0;
@@ -21,6 +27,7 @@ public class ChampArray {
                 result[windowStart] = windowSum / K; // calculate the average
                 windowSum -= arr[windowStart]; // subtract the element going out
                 windowStart++; // slide the window ahead
+                logger.debug(String.valueOf(windowStart));
             }
         }
         return result;

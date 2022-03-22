@@ -17,7 +17,10 @@ package io.github.hiepluong2205.fhda.cis35a.a4e1p1;
  *
  */
 public class SavingsAccount {
-    static float annualInterestRate = 0, savingsBalance;
+    private static float annualInterestRate = 0.00f, savingsBalance = 0.00f;
+
+    public static void modifyInterestRate(double v) {
+    }
 
     public void calculateMonthlyInterest() {
     }

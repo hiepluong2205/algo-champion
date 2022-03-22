@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import java.util.Scanner;
 
-public class ChampArray1DTest {
+public class ChampArrayTest {
     @Ignore
     @Test
     public void test1() {

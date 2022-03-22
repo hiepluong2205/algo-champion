@@ -9,10 +9,10 @@
 
 package io.github.hiepluong2205.educative;
 
+// https://www.educative.io/courses/grokking-the-coding-interview/JPKr0kqLGNP
 class MaxSumSubArrayOfSizeK {
     public static int findMaxSumSubArray(int k, int[] arr) {
-        int windowSum = 0, maxSum = 0;
-        int windowStart = 0;
+        int windowSum = 0, maxSum = 0, windowStart = 0;
         for (int windowEnd = 0; windowEnd < arr.length; windowEnd++) {
             windowSum += arr[windowEnd]; // add the next element
             // slide the window,
@@ -24,7 +24,6 @@ class MaxSumSubArrayOfSizeK {
                 windowStart++; // slide the window ahead
             }
         }
-
         return maxSum;
     }
 }

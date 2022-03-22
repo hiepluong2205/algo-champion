@@ -9,9 +9,10 @@ import java.util.List;
 import static java.lang.Math.abs;
 
 public class ChampCirQueue {
+    final static Logger loggerChampCirQueue = LoggerFactory.getLogger(ChampCirQueue.class);
+
     // store elements
     private List<Integer> champCirQueue;
-    final static Logger loggerChampCirQueue = LoggerFactory.getLogger(ChampCirQueue.class);
 
     // a pointer to indicate the start position
     private int p_head;

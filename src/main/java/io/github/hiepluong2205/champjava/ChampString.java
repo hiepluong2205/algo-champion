@@ -9,9 +9,7 @@
  * - https://discord.com/channels/927730169152675841/927730169731493972
  */
 
-package io.github.hiepluong2205.hackerrank;
+package io.github.hiepluong2205.champjava;
 
-// https://www.hackerrank.com/challenges/java-1d-array/problem?isFullScreen=true
-public class ChampArray1D {
-
+public class ChampString {
 }

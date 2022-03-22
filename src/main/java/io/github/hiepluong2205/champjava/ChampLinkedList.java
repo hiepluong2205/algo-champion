@@ -9,9 +9,20 @@
  * - https://discord.com/channels/927730169152675841/927730169731493972
  */
 
-package io.github.hiepluong2205.leetcode;
+/*
+ * Name: Hiep Tuan Luong
+ * Class & Section: CIS 35A-36Y
+ * Assignment Number:
+ * Due Date:
+ * Date Submitted:
+ *
+ * - https://deanza.instructure.com/courses/23660/assignments
+ * - https://discord.com/channels/927730169152675841/927730169731493972
+ */
 
-import io.github.hiepluong2205.champjava.ChampSet;
+package io.github.hiepluong2205.champjava;
+
+import io.github.hiepluong2205.leetcode.ChampArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

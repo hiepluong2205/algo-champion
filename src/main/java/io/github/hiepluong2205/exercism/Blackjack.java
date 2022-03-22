@@ -9,25 +9,87 @@
 
 package io.github.hiepluong2205.exercism;
 
+// https://exercism.org/tracks/java/exercises/blackjack/edit
 public class Blackjack {
 
+    /*
+ace 	11 	eight 	8
+two 	2 	nine 	9
+three 	3 	ten 	10
+four 	4 	jack 	10
+five 	5 	queen 	10
+six 	6 	king 	10
+seven 	7 	other 	0
+     */
     public int parseCard(String card) {
-        throw new UnsupportedOperationException("Please implement the Blackjack.parseCard method");
+        int value = 0;
+        switch (card) {
+            case "one":
+                value = 1;
+                break;
+            case "two":
+                value = 2;
+                break;
+            case "three":
+                value = 3;
+                break;
+            case "four":
+                value = 4;
+                break;
+            case "five":
+                value = 5;
+                break;
+            case "six":
+                value = 6;
+                break;
+            case "seven":
+                value = 7;
+                break;
+            case "eight":
+                value = 8;
+                break;
+            case "nine":
+                value = 9;
+                break;
+            case "jack":
+            case "queen":
+            case "ten":
+            case "king":
+                value = 10;
+                break;
+            case "ace":
+                value = 11;
+                break;
+            default:
+                value = 0;
+                break;
+        }
+        return value;
     }
 
     public boolean isBlackjack(String card1, String card2) {
         if (parseCard(card1) + parseCard(card2) == 21) {
-
+            return true;
+        } else {
+            return false;
         }
-        throw new UnsupportedOperationException("Please implement the Blackjack.isBlackjack method");
     }
 
     public String largeHand(boolean isBlackjack, int dealerScore) {
-        throw new UnsupportedOperationException("Please implement the Blackjack.largeHand method");
+        if (isBlackjack == true) {
+
+        }
+        String decision = "";
+        decision = "W";
+        decision = "S";
+        return decision;
     }
 
     public String smallHand(int handScore, int dealerScore) {
-        throw new UnsupportedOperationException("Please implement the Blackjack.smallHand method");
+        String decision = "";
+        decision = "W";
+        decision = "H";
+        return decision;
     }
 
     // FirstTurn returns the semi-optimal decision for the first turn, given the cards of the player and the dealer.
