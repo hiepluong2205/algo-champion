@@ -29,12 +29,14 @@ import org.slf4j.LoggerFactory;
 public class ChampLinkedList extends ChampSet {
     final Logger logger = LoggerFactory.getLogger(ChampArray.class);
     int val;
+    private SinglyListNode head;
     ChampLinkedList next;
     ChampLinkedList prev;
 
     // https://leetcode.com/explore/learn/card/linked-list/209/singly-linked-list/1290/
     public ChampLinkedList() {
-        //        val = x;
+        head = null;
+        // val = x;
     }
 
     public int get(int index) {

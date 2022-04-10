@@ -1,21 +1,20 @@
 /*
- * Name: Hiep Tuan Luong
- * Class & Section: CIS 35A-36Y
- * Assignment Number:
- * Due Date: 02/02/2022
- * Date Submitted: 02/02/2022
- *
- * - https://deanza.instructure.com/courses/23660/assignments
- * - https://discord.com/channels/927730169152675841/927730169731493972
+ * https://leetcode.com/study-plan/data-structure/?progress=lrg99ys
+ * https://leetcode.com/study-plan/algorithm/?progress=lnrhw27
+ * https://leetcode.com/study-plan/programming-skills/?progress=le7rceh
  */
+
 package io.github.hiepluong2205.leetcode;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Formatter;
+
 public class ChampArray {
-    int[] intArr;
-    String[] strArr;
     final Logger logger = LoggerFactory.getLogger(ChampArray.class);
 
 
@@ -33,8 +32,43 @@ public class ChampArray {
 
     // https://leetcode.com/problems/average-salary-excluding-the-minimum-and-maximum-salary/
     public double average(int[] salary) {
-        int avg = 0;
+        int sum = 0;
+        double avg = 0.00000d;
+        Arrays.sort(salary);
+        for (int i = 1; i < salary.length - 1; i++) {
+            sum += salary[i];
+        }
+        avg = sum / (salary.length - 2);
+        return avg;
+    }
+
+    // https://leetcode.com/problems/number-of-1-bits/
+    // you need to treat n as an unsigned value
+    public int hammingWeight(int n) {
         return 0;
+    }
+
+    // https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
+    public int subtractProductAndSum(int n) {
+        return 0;
+    }
+
+    // https://leetcode.com/problems/happy-number/
+    public boolean isHappy(int n) {
+        if (true) return true;
+        return false;
+    }
+
+    // https://leetcode.com/problems/next-greater-element-i/
+    public int[] nextGreaterElement(int[] nums1, int[] nums2) {
+        int[] numsResult = new int[nums1.length];
+        for (int i = 0; i < nums1.length; i++) {
+//            if (1 != null) {
+//
+//            }
+            numsResult[i] = -1;
+        }
+        return numsResult;
     }
 
     // https://leetcode.com/explore/learn/card/fun-with-arrays/521/introduction/3238/
@@ -58,47 +92,30 @@ public class ChampArray {
         return capacity;
     }
 
-    public void print(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println("Index " + i + " contains " + arr[i]);
-        }
-    }
-
-    /*
-    - int indicator
-    - Loop through the array from 0 to nums.length
-      - indicator found? return false && break loop
-      - Indicator NOT found? return true
-      i=i+1? i = i+2? i = i+3?
-      i+1 = i+2? i+1 = i+3?
-     */
-    // https://leetcode.com/problems/contains-duplicate/
-    public boolean containsDuplicate(int[] nums) {
-        boolean result = false;
-        for (int i : nums) {
-
-        }
-        for (int i = 0; i < nums.length - 1; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[j] == nums[i]) {
-                    result = true;
-                    break;
-                }
-            }
-        }
-        return result;
-    }
-
     // https://leetcode.com/problems/maximum-subarray/
     public int maxSubArray(int[] nums) {
-        int maxSum = 0, windowSum = 0, windowStart, windowEnd;
-        for (int i = 0; i < nums.length - 1; i++) {
-            for (int j = 0; j < nums.length; j++) {
-
-            }
+        int maxSum = nums[0], windowSum = nums[0], windowStart, windowEnd;
+        System.out.printf("%-10s %-10s %-10s %-10s %n", "i", "nums[i]", "windowSum", "maxSum");
+        for (int i = 1; i < nums.length; i++) {
+            int num = nums[i];
+            System.out.printf("%-10d %-10d %-10d %-10d %n", i, nums[i], windowSum, maxSum);
+            windowSum = Math.max(num, windowSum + num);
+            maxSum = Math.max(maxSum, windowSum);
+            System.out.printf("%-10d %-10d %-10d %-10d %n", i, nums[i], windowSum, maxSum);
         }
-        if (windowSum > maxSum) {
-            maxSum = windowSum;
+        return maxSum;
+    }
+
+    // https://leetcode.com/problems/maximum-absolute-sum-of-any-subarray/
+    public int maxAbsoluteSum(int[] nums) {
+        int maxSum = Math.abs(nums[0]), windowSum = nums[0], windowStart, windowEnd;
+        System.out.printf("%-10s %-10s %-10s %-10s %n", "i", "nums[i]", "windowSum", "maxSum");
+        for (int i = 1; i < nums.length; i++) {
+            int num = nums[i];
+            System.out.printf("%-10d %-10d %-10d %-10d %n", i, nums[i], windowSum, maxSum);
+            windowSum = Math.max(num, windowSum + num);
+            maxSum = Math.max(maxSum, Math.abs(windowSum));
+            System.out.printf("%-10d %-10d %-10d %-10d %n", i, nums[i], windowSum, maxSum);
         }
         return maxSum;
     }
@@ -129,13 +146,48 @@ public class ChampArray {
         return result;
     }
 
-    public int searchBinary(int target) {
-        int indexTarget = -1;
-        if (indexTarget < 0) {
-            return 0;
-        } else {
-            return -1;
+    // https://leetcode.com/problems/binary-search/
+    public int searchBinary(int[] nums, int target) {
+        int iLeft = 0, iRight = nums.length - 1, iPivot;
+        while (iLeft <= iRight) {
+            iPivot = iLeft + (iRight - iLeft) / 2;
+            if (target == nums[iPivot]) return iPivot;
+            else if (target < nums[iPivot]) iRight = iPivot - 1;
+            else iLeft = iPivot + 1;
         }
+        return -1;
+    }
+
+    // https://leetcode.com/problems/first-bad-version/
+    public int firstBadVersion(int n) {
+        int iLeft = 0, iRight = n - 1, iPivot;
+        while (iLeft <= iRight) {
+            iPivot = iLeft + (iRight - iLeft) / 2;
+            if (isBadVersion(iPivot)) iRight = iPivot - 1;
+            else iLeft = iPivot + 1;
+        }
+        return iLeft;
+    }
+
+    // https://leetcode.com/problems/first-bad-version/
+    private boolean isBadVersion(int version) {
+        return true;
+    }
+
+    // https://leetcode.com/problems/search-insert-position/
+    public int searchInsert(int[] nums, int target) {
+        int iLeft = 0, iRight = nums.length - 1, iPivot;
+        if (target > nums[iRight]) return nums.length;
+        if (target < nums[iLeft]) return 0;
+        System.out.printf("%-10S %-10S %-10S %n", "iLeft", "iPivot", "iRight");
+        while (iLeft <= iRight) {
+            iPivot = iLeft + (iRight - iLeft) / 2;
+            if (target == nums[iPivot]) return iPivot;
+            else if (target < nums[iPivot]) iRight = iPivot - 1;
+            else iLeft = iPivot + 1;
+            System.out.printf("%-10d %-10d %-10d %n", iLeft, iPivot, iRight);
+        }
+        return iLeft;
     }
 
     // https://leetcode.com/explore/learn/card/fun-with-arrays/527/searching-for-items-in-an-array/3250/
@@ -154,6 +206,86 @@ public class ChampArray {
     public int[] replaceElements(int[] arr) {
         int[] arrInt = {};
         return arrInt;
+    }
+
+    public int findNumbers(int[] nums) {
+        int numCount = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int number = Math.abs(nums[i]);
+            if ((number >= 10 && number < 100) | (number >= 1000 && number < 10000) | (number >= 100000 && number < 1000000) | (number >= 10000000 && number < 100000000)) {
+                numCount++;
+            } else {
+                // do nothing
+            }
+        }
+        return numCount;
+    }
+
+    // https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3245/
+    public static void duplicateZeros(int[] arrTarget) {
+        int countZero = 0;
+        countZero = countElement(arrTarget, 0);
+
+        // 2. create new int[]
+        int[] arrExpanded = new int[arrTarget.length + countZero];
+
+        // 3. duplicate zeros
+        for (int i = 0; i < arrExpanded.length; i++) {
+            if (arrExpanded[i] == 0) {
+                arrExpanded = new int[arrExpanded.length + 1];
+            } else {
+                //do nothing
+            }
+        }
+        // 4. print arrExpanded
+    }
+
+    public static int[] addLeft(int[] arrTarget, int index, int value) {
+        // create new blank arr, as a container
+        int[] arrExpanded = new int[arrTarget.length + 1];
+
+        // 1. Shift each element one position to the right
+        for (int i = arrExpanded.length - 1; i >= index; i--) {
+            System.out.println(i);
+            arrExpanded[i] = arrTarget[i - 1];
+            System.out.printf("Index %d: %d%n", i, arrExpanded[i]);
+        }
+
+        // 2. Set value to the desired index
+        arrExpanded[index] = value;
+        return arrExpanded;
+    }
+
+    protected static int countElement(int[] arrTarget, int elementTarget) {
+        int countElement = 0;
+        for (int i = 0; i < arrTarget.length; i++) {
+            if (arrTarget[i] == 0) {
+                countElement++;
+            } else {
+                // do nothing
+            }
+        }
+        return countElement;
+    }
+
+
+    // https://leetcode.com/explore/learn/card/fun-with-arrays/526/deleting-items-from-an-array/3247/
+    public int removeElement(int[] nums, int val) {
+        // Say we want to delete the element at index 1
+        for (int i = 2; i < nums.length; i++) {
+            // Shift each element one position to the left
+            nums[i - 1] = nums[i];
+        }
+        // Again, the length needs to be consistent with the current
+        // state of the array.
+//        nums.length--;
+        return nums.length;
+    }
+
+    // https://leetcode.com/explore/learn/card/fun-with-arrays/526/deleting-items-from-an-array/3248/
+    public int removeDuplicates(int[] nums) {
+        int num = 0;
+        return num;
     }
 
 }

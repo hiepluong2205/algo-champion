@@ -1,7 +1,6 @@
 package io.github.hiepluong2205;
 
-import io.github.hiepluong2205.leetcode.ChampArray1D;
-import org.testng.Assert;
+import io.github.hiepluong2205.leetcode.ChampArray;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
@@ -60,33 +59,22 @@ public class ChampArrayTest {
     @Test
     public void findNumbers() {
         //    int[] nums = {12, 345, 2, 6, 7896};
-        ChampArray1D arr = new ChampArray1D();
+        ChampArray arr = new ChampArray();
         int[] nums = {555, 901, 482, 1771};
         arr.findNumbers(nums);
     }
 
-    @Ignore
-    @Test
-    public void sortedSquares() {
-        ChampArray1D arr = new ChampArray1D();
-        // int[] nums = {555, 901, 482, 1771};
-        // int[] nums = {-7,-3,2,3,11};
-        int[] nums = {-4, -1, 0, 3, 10};
-        int[] expectedSquaredNums = {0, 1, 9, 16, 100};
-        arr.sortedSquares(nums);
-        Assert.assertEquals(arr.sortedSquares(nums), expectedSquaredNums);
-    }
 
     //    @Ignore
     @Test
     public void testduplicateZeros() {
-        ChampArray1D champarr = new ChampArray1D();
+        ChampArray champarr = new ChampArray();
         int[] arr = {1, 0, 2, 3, 0, 4, 5, 0};
 //        int[] arr = {1, 2, 3};
 //        champarr.duplicateZeros(arr);
-        champarr.print(arr);
+        System.out.printf(String.valueOf(arr));
         champarr.addLeft(arr, 2, 0);
-        champarr.print(arr);
+        System.out.printf(String.valueOf(arr));
     }
 
     @Test

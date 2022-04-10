@@ -1,3 +1,9 @@
+/*
+ * https://leetcode.com/study-plan/data-structure/?progress=lrg99ys
+ * https://leetcode.com/study-plan/algorithm/?progress=lnrhw27
+ * https://leetcode.com/study-plan/programming-skills/?progress=le7rceh
+ */
+
 package io.github.hiepluong2205.champjava;
 
 import java.util.Arrays;
@@ -44,12 +50,6 @@ public class ChampArray extends ChampSet {
         return countStep;
     }
 
-    public void print(int[] intArray) {
-        for (int i = 0; i < intArray.length; i++) {
-            System.out.println("Index " + i + " contains " + intArray[i]);
-        }
-    }
-
     public int findMaxConsecutiveOnes(int[] nums) {
         int numCount = 0;
         return numCount;
@@ -72,8 +72,8 @@ public class ChampArray extends ChampSet {
         return numCount;
     }
 
+    // https://leetcode.com/problems/squares-of-a-sorted-array/
     public int[] sortedSquares(int[] nums) {
-        System.out.println(nums.length);
         for (int i = 0; i < nums.length; i++) {
             System.out.println("nums[i] = " + nums[i]);
             nums[i] = nums[i] * nums[i];
@@ -140,9 +140,20 @@ public class ChampArray extends ChampSet {
         }
     }
 
+    // https://leetcode.com/problems/merge-sorted-array/
     // https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3253/
-    public void mergeSortedArray(int[] nums1, int m, int[] nums2, int n) {
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int p1 = m - 1, p2 = n - 1;
+        for (int i = m + n - 1; i >= 0; i--) {
+            if (nums2[i] > nums1[i]) {
 
+            }
+        }
+        for (int i = 0; i < nums1.length; i++) {
+            if (nums2[i] <= nums1[i]) {
+
+            }
+        }
     }
 
     // https://leetcode.com/explore/learn/card/fun-with-arrays/526/deleting-items-from-an-array/3247/
@@ -164,19 +175,19 @@ public class ChampArray extends ChampSet {
         return result;
     }
 
-    // https://leetcode.com/problems/contains-duplicate/
-    public boolean containsDuplicate(int[] nums) {
-        Boolean blnResult = false;
-        while (blnResult = false) {
-            for (int i = 0; i < nums.length; i++) {
-                for (int j = 0; j < nums.length; j++) {
-                    if (nums[j] == nums[i]) {
-                        blnResult = true;
-                    }
+    // https://leetcode.com/problems/two-sum/
+    public int[] twoSum(int[] nums, int target) {
+        int[] resultArray = new int[2];
+        System.out.printf("%-10s %-10s %-10s %-10s %-20s %-20s %n", "i", "j", "nums[i]", "nums[j]", "resultArray[0]", "resultArray[1]");
+        for (int i = 0; i < nums.length - 1; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] == target - nums[i]) {
+                    resultArray[0] = i;
+                    resultArray[1] = j;
+                    System.out.printf("%-10d %-10d %-10d %-10d %-20d %-20d %n", i, j, nums[i], nums[j], resultArray[0], resultArray[1]);
                 }
             }
         }
-        return blnResult;
+        return null;
     }
-
 }

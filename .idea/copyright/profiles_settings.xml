@@ -1,7 +1,7 @@
 <component name="CopyrightManager">
-  <settings default="io.github.hiepluong2205.fhda">
+  <settings>
     <module2copyright>
-      <element module="All" copyright="io.github.hiepluong2205.fhda" />
+      <element module="All" copyright="io.github.hiepluong2205.leetcode" />
     </module2copyright>
   </settings>
 </component>

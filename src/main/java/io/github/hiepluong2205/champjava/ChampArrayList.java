@@ -16,5 +16,6 @@ public class ChampArrayList extends ChampList {
         Collections.shuffle(numbers);
         return numbers;
     }
+
 }
 
