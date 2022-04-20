@@ -22,12 +22,12 @@
 
 package io.github.hiepluong2205.champjava;
 
-import io.github.hiepluong2205.leetcode.ChampArray;
+import io.github.hiepluong2205.champjava.ChampArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ChampLinkedList extends ChampSet {
-    final Logger logger = LoggerFactory.getLogger(ChampArray.class);
+    final Logger logger = LoggerFactory.getLogger(ChampLinkedList.class);
     int val;
     private SinglyListNode head;
     ChampLinkedList next;

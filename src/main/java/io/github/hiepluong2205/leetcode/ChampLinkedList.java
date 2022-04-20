@@ -27,7 +27,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ChampLinkedList extends ChampSet {
-    final Logger logger = LoggerFactory.getLogger(ChampArray.class);
+    final Logger logger = LoggerFactory.getLogger(ChampLinkedList.class);
     static int val;
     private ListNode head;
     static ChampLinkedList next;

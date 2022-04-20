@@ -7,6 +7,7 @@
 package io.github.hiepluong2205.champjava;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
@@ -24,12 +25,14 @@ public class ChampHashTableTest {
 
     @Test
     public void testTwoSum() {
+        int[] nums = {3, 2, 4}, indicesArrayExpected = {1, 2};
+        int target = 6;
+        /*
         int[] nums = {2, 7, 11, 15}, indicesArrayExpected = {0, 1};
         int target = 9;
-//        int[] nums = {3, 2, 4}, indicesArrayExpected = {1, 2};
-//        int target = 6;
-//        int[] nums = {3, 3}, indicesArrayExpected = {0, 1};
-//        int target = 6;
-        Assert.assertEquals(indicesArrayExpected, champHashTable1.twoSum(nums, target));
+        int[] nums = {3, 3}, indicesArrayExpected = {0, 1};
+        int target = 6;
+         */
+        Assert.assertEquals(champHashTable1.twoSum(nums, target), indicesArrayExpected);
     }
 }

@@ -21,16 +21,29 @@ public class ChampHashTable {
         return result;
     }
 
+    // https://leetcode.com/problems/contains-duplicate-ii/
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums.length; j++) {
+                if (nums[i] == nums[j] & Math.abs(i - j) <= k) {
+                    return true;
+                }
+            }
+        }
+        return true;
+    }
+
+
     // https://leetcode.com/problems/two-sum/
     public int[] twoSum(int[] nums, int target) {
         int num1 = 0, num2 = 0;
         Map<Integer, Integer> numsMap = new HashMap<>();
-        System.out.printf("%-10s%-10s%-10s%-10s%n", "i", "num1", "num2");
+        System.out.printf("%-10s %-10s %-10s %n", "i", "num1", "num2");
         for (int i = 0; i < nums.length; i++) {
             num1 = nums[i];
             num2 = target - num1;
             if (numsMap.containsKey(num2)) {
-                System.out.printf("",i,num1,num2);
+                System.out.printf("%-10d %-10d %-10d %n", i, num1, num2);
                 return new int[]{i, numsMap.get(num2)};
             }
             numsMap.put(nums[i], i);
